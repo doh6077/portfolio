@@ -1,0 +1,33 @@
+
+.card { 
+  max-width: 450px; 
+  margin: 10px; 
+  text-align: center;
+  color:aqua;
+  height: 70vh;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+} 
+
+mat-card {
+  text-align: center;
+}
+  
+mat-card-subtitle { 
+  font-size: 18px; 
+  margin: 10px; 
+} 
+  
+mat-card-title { 
+
+  font-size: 30px; 
+  justify-content: center; 
+  display: flex; 
+}
+
+.project-image {
+    width: 70%;
+    height:auto;
+
+}

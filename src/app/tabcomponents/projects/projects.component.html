@@ -1,0 +1,14 @@
+
+<h2>My Projects</h2>
+<input type="text" placeholder="title" [(ngModel)]="title" (ngModelChange)="update()"/>
+<p>{{title}}</p>
+
+<mat-card class="card" *ngFor="let x of filteredData">
+    <mat-card-header>
+        <mat-card-title>{{x.title}}</mat-card-title>
+        <mat-card-subtitle>{{x.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <img mat-card-image class="project-image" [src]="x.image" [alt]="x.title">
+    </mat-card-content>
+</mat-card>

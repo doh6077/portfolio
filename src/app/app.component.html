@@ -1,0 +1,15 @@
+
+<div [ngClass]="{'darkMode': darkMode, 'normal' : !darkMode}" [ngStyle]="{ textAlign: 'center' }">
+    <app-header [content]="content"></app-header>
+    <mat-checkbox [(ngModel)]="darkMode" (change)="onCheckbox($event)" >
+        Dark Mode 
+    </mat-checkbox>
+    <router-outlet></router-outlet>
+    <app-about [content]="content"></app-about>
+
+    <app-projects [projects]="projects"></app-projects>
+
+
+    <app-contact  [content]="content"></app-contact>
+    <app-footer [content]="content"></app-footer>
+</div>
