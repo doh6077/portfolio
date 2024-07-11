@@ -16,12 +16,17 @@ import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button"; 
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, RouterLink} from '@angular/router';
+import {Content, Projects} from './interaceCP';
+import codata from '../assets/data/content.json';
 
+const content: Content = codata.ContentInfo;
 const approutes: Routes = [
-  {path: "about", component: AboutComponent},
+  {path: "", component: AboutComponent},
+  {path: "about", component: AboutComponent, data:{codata}},
+  {path: "projects", component: ProjectsComponent},
   {path: "contact", component: ContactComponent} ]
-  
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +44,8 @@ const approutes: Routes = [
     MatButtonModule,
     MatCheckboxModule,
     FormsModule,
-    RouterModule.forRoot(approutes)
+    RouterModule.forRoot(approutes),
+    RouterLink
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,31 +3,34 @@
             "id": 1,
             "title": "Project1",
             "subtitle": "Movie Collection Manager with Flask",
-            "image": "assets/images/project1.png"
+            "image": "assets/images/project1.png",
+            "language":"Python, HTML, CSS, PostgreSQL",
+            "github":"https://github.com/doh6077/Top-movies"
+            
         },
         {
             "id": 2,
             "title": "Project2",
             "subtitle": "Book Store Management",
-            "image": "assets/images/project2.png"
+            "image": "assets/images/project2.png",
+            "language":"PHP, HTML, CSS, MySQL",
+            "github":"https://github.com/doh6077/BookStore-management-"
         },
         {
             "id": 3,
             "title": "Project3",
             "subtitle": "Crossing Game",
-            "image": "assets/images/project3.png"
+            "image": "assets/images/project3.png",
+            "language":"Python Pygame",
+            "github":"https://github.com/doh6077/CrossingGame"
         },
         {
             "id": 4,
             "title": "Project4",
-            "subtitle": "Car Detection",
-            "image": "assets/images/project4.png"
-        },
-        {
-            "id": 5,
-            "title": "Project5",
             "subtitle": "Personal Banking System",
-            "image": "assets/images/project5.jpeg"
+            "image": "assets/images/project5.jpeg",
+            "language":"Java",
+            "github":"https://github.com/doh6077/Personal_Banking_System"
         }
     ]
 }

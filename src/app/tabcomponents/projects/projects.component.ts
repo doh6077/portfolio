@@ -1,24 +1,42 @@
-import { Component, Input } from '@angular/core';
-import {Content, Projects} from '../../interaceCP';
+import { Component, Input, OnInit } from '@angular/core';
+import {Projects} from '../../interaceCP';
+import { ActivatedRoute } from '@angular/router';
+import prodata from '../../../assets/data/project.json';
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent {
-  @Input() content!:Content
-  @Input() projects!:Projects[]
+
+export class ProjectsComponent implements OnInit{
+
+  
+
+  projects: Projects[] = prodata.projects;
+
+  
   title: string =""
   filteredData: Projects[]= []
 
-  ngOnInit() {
-    this.filteredData = [...this.projects];  
+  constructor(private route: ActivatedRoute) { }
+  ngOnInit(): void {
+    
+    
+    //this.route.data.subscribe(data => {
+      //this.projects = data['projects'];
+      
+      this.filteredData = [...this.projects];
+      
+      console.log('Projects:', this.projects);
+    
+    
   }
 
   update(){
     if (this.title){
       this.filteredData = this.projects.filter(project => 
-        project.title.toLowerCase().includes(this.title.toLowerCase())
+        project.subtitle.toLowerCase().includes(this.title.toLowerCase())
       );
         } else{
         this.filteredData =[...this.projects];

@@ -11,11 +11,11 @@ import { MatCheckboxChange } from '@angular/material/checkbox';
 
 })
 export class AppComponent {
-  darkMode = false;
-  title = 'Assignment1';
+  title = 'Portfolio_DoheeKim';
   content: Content = codata.ContentInfo;
   projects: Projects[] = prodata.projects;
-
+  darkMode : boolean = false;
+  
   onCheckbox(event: MatCheckboxChange) {
     this.darkMode = event.checked;
   }

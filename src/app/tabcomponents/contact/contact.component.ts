@@ -1,6 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
-import {Content, Projects} from '../../interaceCP';
+import {Content} from '../../interaceCP';
+import codata from '../../../assets/data/content.json';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -8,7 +10,7 @@ import {Content, Projects} from '../../interaceCP';
 })
 export class ContactComponent {
 
-  @Input() content!:Content
+  content: Content = codata.ContentInfo;
 
 
 }

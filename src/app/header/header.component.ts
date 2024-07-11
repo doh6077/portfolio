@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import {Content, Projects} from '../interaceCP';
+import {Content} from '../interaceCP';
+import codata from '../../assets/data/content.json';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,6 +9,6 @@ import {Content, Projects} from '../interaceCP';
 export class HeaderComponent {
   sname = "Dohee Kim";
   srole = "software developer";
-  @Input() content!:Content
+  content: Content = codata.ContentInfo;
 
 }

@@ -1,2 +1,26 @@
-<h2> Contact</h2>
-<h3>LinkdIn: {{content.linkedIn}}</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Other sections -->
+    
+    <section class="mt-8">
+        <h1 class="text-3xl font-bold text-center mb-4">Contact</h1>
+        <div class="flex justify-center items-center space-x-6">
+            <a href="{{content.linkedIn}}" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                <i class="fa fa-linkedin-square" style="font-size:48px"></i>
+            </a>
+            <a href="{{content.github}}" target="_blank" class="text-gray-800 hover:text-gray-600 transition-colors duration-300">
+                <i class="fa fa-github" style="font-size:48px"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Rest of the document -->
+</body>
+</html>
